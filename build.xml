@@ -40,10 +40,10 @@
   </target>
   
   <target name="dist" depends="jar, copyweb">
-  <zip destfile="dist/app-1.0.zip">
+  <war destfile="dist/app-1.0.zip">
     <fileset dir="build/jar"/>
     <fileset dir="build/web"/>
-  </zip>
+  </war>
   </target>
   
   
