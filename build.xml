@@ -40,6 +40,7 @@
   </target>
   
   <target name="dist" depends="jar, copyweb">
+	  <needxmlfile="flase">
   <war destfile="dist/app-1.0.war">
     <fileset dir="build/jar"/>
     <fileset dir="build/web"/>
