@@ -40,8 +40,8 @@
   </target>
   
   <target name="dist" depends="jar, copyweb">
-	  <war destfile="dist/app-1.0.war" webxml = "${web.dir}/web.xml">
-    <needxmlfile="flase"/>
+   <war destfile="dist/app-1.0.war" webxml = "${web.dir}/web.xml">
+	<needxmlfile="true"/>
     <fileset dir="build/jar"/>
     <fileset dir="build/web"/>
   </war>
