@@ -19,6 +19,7 @@
 	 <mkdir dir ="build/jar"/>
 	 <mkdir dir ="build/web"/>
 	 <mkdir dir ="src/java"/>
+	 <mkdir dir ="src/web"/>
   </target>
   
   <target name="compile" depends="init">
