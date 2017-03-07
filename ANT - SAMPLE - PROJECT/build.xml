@@ -1,0 +1,48 @@
+<project name="my project" default="dist">
+  
+  <!--
+         clean - delete exiting build
+		 compile source code - input .java files & output .class files
+		 create a jar file - input is the .class files and output is the jar file
+		 copy the web files
+		 create a zip containing the web and jar files and ship to customer
+		 
+  -->
+  
+  <target name="clean">
+       <delete dir="build"/>
+  </target>
+  
+  <target name="init" depends="clean">
+     <mkdir dir ="build"/>
+	 <mkdir dir ="build/classes"/>
+	 <mkdir dir ="build/jar"/>
+	 <mkdir dir ="build/web"/>
+  </target>
+  
+  <target name="compile" depends="init">
+       <javac srcdir="src/java"
+         destdir="build/classes"
+         classpath="lib/junit.jar"/>
+   </target>
+  
+  <target name="jar" depends="compile">
+        <jar destfile="build/jar/app-1.0.jar" basedir="build/classes"/>
+  
+  </target>
+  
+  <target name="copyweb">
+        <copy todir="build/web">
+			<fileset dir="src/web"/>
+		</copy>
+  </target>
+  
+  <target name="dist" depends="jar, copyweb">
+  <zip destfile="dist/app-1.0.zip">
+    <fileset dir="build/jar"/>
+    <fileset dir="build/web"/>
+  </zip>
+  </target>
+  
+  
+</project>
