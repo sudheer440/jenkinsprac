@@ -18,6 +18,7 @@
 	 <mkdir dir ="build/classes"/>
 	 <mkdir dir ="build/jar"/>
 	 <mkdir dir ="build/web"/>
+	 <mkdir dir ="src/java"/>
   </target>
   
   <target name="compile" depends="init">
