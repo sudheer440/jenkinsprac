@@ -9,8 +9,7 @@
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
-       //<url-pattern>*.htm</url-pattern>
-    </servlet-mapping>
+        </servlet-mapping>
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
     </welcome-file-list>
